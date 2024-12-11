@@ -1,11 +1,14 @@
 source "https://rubygems.org"
 
+gem "dotenv-rails", groups: [ :development, :test ]
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.2"
 # Use mysql as the database for Active Record
 gem "mysql2", "~> 0.5"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
+gem "devise"
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
@@ -28,15 +31,22 @@ gem "bootsnap", require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
+gem "figaro", "~> 1.2.0"
+gem "jwt"
+
+#
+gem "devise-jwt", "~> 0.11.0"
 gem "kaminari"
 # Gemfile
 #
 gem "image_processing", ">= 1.2"
 
 gem "rack-cors", require: "rack/cors"
-
 group :development, :test do
   gem "annotate"
+  gem "pry"
+  gem "pry-rails"
+
 
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
