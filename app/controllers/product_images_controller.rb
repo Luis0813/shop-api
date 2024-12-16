@@ -1,7 +1,6 @@
 class ProductImagesController < ApplicationController
   before_action :set_product
-  # before_action -> { ActiveStorage::Current.url_options = { host: request.base_url } }
-
+  skip_before_action :authenticate!, except: %i[create]
   def show
     if @product.image.attached?
         render json: {

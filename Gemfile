@@ -34,15 +34,15 @@ gem "bootsnap", require: false
 gem "figaro", "~> 1.2.0"
 gem "jwt"
 
-#
+
 gem "devise-jwt", "~> 0.11.0"
 gem "kaminari"
 # Gemfile
 #
 gem "image_processing", ">= 1.2"
-
 gem "rack-cors", require: "rack/cors"
 group :development, :test do
+  gem "prism"
   gem "annotate"
   gem "pry"
   gem "pry-rails"

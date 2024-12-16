@@ -21,7 +21,7 @@ class User < ApplicationRecord
 
   before_create :initialize_jti
 
-  def self.authenticate!(params)
+  def self.authenticate(params)
     user  = User.find_for_authentication(email: params[:email])
     user&.valid_password?(params[:password]) ? user : nil
   end

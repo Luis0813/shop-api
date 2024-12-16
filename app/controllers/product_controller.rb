@@ -1,5 +1,5 @@
 class ProductController < ApplicationController
-    # GET /product
+  skip_before_action :authenticate!, except: %i[create]
 
     def index
        @products = Product.all

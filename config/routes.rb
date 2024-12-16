@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :product, only: [ :index, :show, :create, :update  ]
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :session, only: [ :edit, :create ]
+  resources :session, only: [ :index, :create ]
   resources :products do
      resource :product_images, only: [ :show, :create ]
   end
