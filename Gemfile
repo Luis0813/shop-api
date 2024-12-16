@@ -35,7 +35,7 @@ gem "figaro", "~> 1.2.0"
 gem "jwt"
 
 
-gem "devise-jwt", "~> 0.11.0"
+gem "devise-jwt", "~> 0.12.1"
 gem "kaminari"
 # Gemfile
 #
